@@ -1,4 +1,4 @@
-markdown# 🔄 Data Engineering Pipeline — Olist E-Commerce
+# 🔄 Data Engineering Pipeline — Olist E-Commerce
 
 ETL pipeline built with Apache Airflow, Pandas and PostgreSQL using the 
 Brazilian E-Commerce dataset (Olist, 2016–2018).
