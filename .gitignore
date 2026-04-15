@@ -1,0 +1,20 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Airflow
+airflow/logs/
+airflow/plugins/
+airflow/.env
+
+# Datos (los CSVs no se suben a GitHub, son muy pesados)
+data/raw/
+data/processed/
+
+# Sistema
+.DS_Store
