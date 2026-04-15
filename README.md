@@ -14,6 +14,10 @@ PostgreSQL (data warehouse)
 ↓
 SQL Analysis (JOINs, Window Functions, CTEs)
 
+## 📸 Pipeline in action
+
+![Airflow DAG](assets/airflow_dag.png)
+
 ## 🛠️ Tech Stack
 
 - **Orchestration:** Apache Airflow 2.9
