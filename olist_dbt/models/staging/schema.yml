@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: public
+    database: data_engineering
+    schema: public
+    tables:
+      - name: orders
+      - name: customers
+      - name: payments

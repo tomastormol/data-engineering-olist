@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: delivery_performance
+    description: "Delivery performance metrics by Brazilian state"
+    columns:
+      - name: state
+        description: "Brazilian state code"
+        tests:
+          - unique
+          - not_null
+
+  - name: payment_summary
+    description: "Payment summary by payment type"
+    columns:
+      - name: tipo_de_pago
+        description: "Payment method"
+        tests:
+          - unique
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['credit_card', 'boleto', 'voucher', 'debit_card']

@@ -73,3 +73,35 @@ http://localhost:8080 (user: airflow / pass: airflow)
 ## 📂 Dataset
 
 [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
+
+## 🔄 dbt — Data Transformations
+
+Data transformations built with dbt following the Medallion Architecture:
+Bronze (PostgreSQL raw tables via Airflow)
+↓
+Silver (dbt staging/ — cleaned and renamed)
+↓
+Gold   (dbt mart/ — business-ready tables)
+
+### Models
+
+| Model | Layer | Description |
+|-------|-------|-------------|
+| `stg_orders` | Silver | Delivered orders with clean column names |
+| `stg_customers` | Silver | Customers with simplified columns |
+| `stg_payments` | Silver | Payments excluding invalid types |
+| `delivery_performance` | Gold | Delivery metrics by Brazilian state |
+| `payment_summary` | Gold | Payment breakdown by method |
+
+### dbt Lineage
+
+![dbt Lineage](assets/dbt_lineage.png)
+
+### Run dbt
+
+```bash
+cd olist_dbt
+dbt run    # execute all models
+dbt test   # run data quality tests
+dbt docs generate && dbt docs serve  # open documentation
+```
